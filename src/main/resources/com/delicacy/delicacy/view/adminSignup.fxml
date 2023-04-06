@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="as" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.delicacy.delicacy.dashboard">
+    <left>
+        <AnchorPane prefHeight="510.0" prefWidth="370.0" style="-fx-background-color: #c18640;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="592.0" fitWidth="549.0" layoutY="-62.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/delight1.jpg" />
+                    </image>
+                </ImageView>
+                <Text fill="#fdfcfc" layoutX="65.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delicacy" wrappingWidth="241.79742431640625">
+                    <font>
+                        <Font name="Dubai Bold" size="60.0" />
+                    </font>
+                </Text>
+            <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane fx:id="as_ap" prefHeight="510.0" prefWidth="526.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="a_s_firstName" layoutX="136.0" layoutY="126.0" prefHeight="25.0" prefWidth="300.0" promptText="First Name" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+                <TextField fx:id="a_s_lastName" layoutX="136.0" layoutY="171.0" prefHeight="25.0" prefWidth="300.0" promptText="Last Name" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+                <TextField fx:id="a_s_email" layoutX="136.0" layoutY="219.0" prefHeight="25.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+                <PasswordField fx:id="a_s_password" layoutX="136.0" layoutY="267.0" prefHeight="25.0" prefWidth="300.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+                <PasswordField fx:id="a_s_confirmPassword" layoutX="136.0" layoutY="309.0" prefHeight="25.0" prefWidth="300.0" promptText="Confirm Password" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+                <Button fx:id="a_s_registerButton" layoutX="248.0" layoutY="372.0" mnemonicParsing="false" onAction="#admin_signup_submit" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #c18640; -fx-background-radius: 0px;" text="Submit" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Text fill="#404040" layoutX="208.0" layoutY="431.0" onMouseClicked="#admin_login2" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account? Login">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Text>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

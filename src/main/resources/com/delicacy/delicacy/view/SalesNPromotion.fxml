@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="SP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="900.0" style="-fx-background-color: #b02510;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.delicacy.delicacy.SalesNPromotionController">
+    <children>
+      <Pane layoutX="8.0" layoutY="362.0" prefHeight="138.0" prefWidth="878.0" style="-fx-background-color: #b02510;">
+         <children>
+            <Label layoutX="82.0" layoutY="14.0" text="Add Promo Code" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+              <TextField fx:id="SalesPromoCode" layoutX="35.0" layoutY="70.0" prefHeight="31.0" prefWidth="112.0" promptText="Promo Code" />
+            <Button fx:id="SalesAdd" layoutX="248.0" layoutY="70.0" onAction="#addPromoCodeOnAction" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #c18640;" text="ADD" textFill="#171717">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+              <Button fx:id="SalesSendMail" layoutX="745.0" layoutY="63.0" onAction="#email" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #c18640;" text="Send Mail" textFill="#171717">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </Button>
+            <TextArea fx:id="SalesMessage" layoutX="402.0" layoutY="46.0" prefHeight="78.0" prefWidth="313.0" promptText="Enter Message" />
+            <Label layoutX="502.0" layoutY="14.0" text="Promotion" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Amount" layoutX="155.0" layoutY="70.0" prefHeight="31.0" prefWidth="80.0" promptText="Amount" />
+         </children>
+      </Pane>
+
+        <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="900.0" style="-fx-background-color: #c18640;">
+         <children>
+            <Button fx:id="Back" mnemonicParsing="false" onAction="#back" prefHeight="18.0" prefWidth="43.0" text="Back">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Pane layoutX="14.0" layoutY="41.0" mouseTransparent="true" prefHeight="330.0" prefWidth="432.0" style="-fx-background-color: #923601;">
+         <children>
+            <Pane layoutX="160.0" layoutY="44.0" prefHeight="250.0" prefWidth="267.0" style="-fx-background-color: #c18640;">
+               <children>
+                  <LineChart fx:id="GraphLastMonth" alternativeRowFillVisible="false" layoutX="-3.0" layoutY="28.0" pickOnBounds="false" prefHeight="225.0" prefWidth="267.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" tickLabelFill="#3a5156">
+                           <tickLabelFont>
+                              <Font size="10.0" />
+                           </tickLabelFont></CategoryAxis>
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" tickLabelFill="#3a5156">
+                           <tickLabelFont>
+                              <Font name="Bookshelf Symbol 7" size="10.0" />
+                           </tickLabelFont></NumberAxis>
+                    </yAxis>
+                  </LineChart>
+                  <Label layoutX="14.0" layoutY="14.0" text="Sales (BDT)" textFill="#3a5156">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="SalesLastMonth" alignment="CENTER" prefHeight="33.0" prefWidth="432.0" style="-fx-background-color: #c18640;" text="Last 30 Days" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutY="82.0" prefHeight="174.0" prefWidth="154.0" style="-fx-background-color: #c18640;">
+               <children>
+                  <Label alignment="CENTER" layoutX="2.0" layoutY="-3.0" prefHeight="41.0" prefWidth="154.0" text="Summary" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="12.0" layoutY="87.0" prefHeight="21.0" prefWidth="95.0" text="Completed   :" textFill="#3a5156">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="52.0" prefHeight="21.0" prefWidth="95.0" text="Total Orders :" textFill="#3a5156">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="LMTorders" fill="#491f1f" layoutX="112.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="121.0" prefHeight="21.0" prefWidth="95.0" text="Total Sales   :" textFill="#3a5156">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="LMCOrder" fill="#491f1f" layoutX="112.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="LMTSales" fill="#491f1f" layoutX="112.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="SalesSix" layoutX="454.0" layoutY="41.0" mouseTransparent="true" prefHeight="330.0" prefWidth="432.0" style="-fx-background-color: #923601;">
+         <children>
+            <Pane layoutX="160.0" layoutY="44.0" prefHeight="250.0" prefWidth="267.0" style="-fx-background-color: #c18640;">
+               <children>
+                  <LineChart fx:id="GraphSix" layoutX="-3.0" layoutY="28.0" prefHeight="225.0" prefWidth="267.0">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM">
+                           <tickLabelFont>
+                              <Font name="Bookshelf Symbol 7" size="10.0" />
+                           </tickLabelFont></CategoryAxis>
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="GaraphSix" side="LEFT">
+                           <tickLabelFont>
+                              <Font size="10.0" />
+                           </tickLabelFont></NumberAxis>
+                     </yAxis>
+                  </LineChart>
+                  <Label layoutX="14.0" layoutY="14.0" text="Sales (BDT)" textFill="#3a5156">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" prefHeight="33.0" prefWidth="432.0" style="-fx-background-color: #c18640;" text="Last Six Months" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutY="82.0" prefHeight="174.0" prefWidth="154.0" style="-fx-background-color: #c18640;">
+               <children>
+                  <Label alignment="CENTER" layoutX="2.0" layoutY="-3.0" prefHeight="41.0" prefWidth="154.0" text="Summary" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="12.0" layoutY="87.0" prefHeight="21.0" prefWidth="95.0" text="Completed   :" textFill="#3a5156">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="52.0" prefHeight="21.0" prefWidth="95.0" text="Total Orders :" textFill="#3a5156">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="LSTOrder" fill="#491f1f" layoutX="112.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="121.0" prefHeight="21.0" prefWidth="95.0" text="Total Sales   :" textFill="#3a5156">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="LSTCorder" fill="#491f1f" layoutX="112.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="LSTSales" fill="#491f1f" layoutX="112.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

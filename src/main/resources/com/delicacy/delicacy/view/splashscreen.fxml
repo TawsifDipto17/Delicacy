@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ap" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.delicacy.delicacy.splashscreen">
+   <ImageView fitHeight="700.0" fitWidth="1100.0" layoutX="-60.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-227.5" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="-420.0" AnchorPane.topAnchor="-20.0">
+      <image>
+         <Image url="@../Images/splash_background.jpg" />
+      </image>
+   </ImageView>
+   <Text fill="#f7f5f5" layoutX="188.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delicacy" wrappingWidth="348.4913787841797" AnchorPane.bottomAnchor="188.69000244140625" AnchorPane.topAnchor="99.38999938964844">
+      <font>
+         <Font name="Dubai Regular" size="90.0" />
+      </font>
+   </Text>
+
+</AnchorPane>

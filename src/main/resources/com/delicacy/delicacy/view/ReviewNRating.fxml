@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="RR" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="900.0" style="-fx-background-color: #b02510;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.delicacy.delicacy.ReviewNRatingController">
+    <children>
+
+        <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="900.0" style="-fx-background-color: #c18640;">
+         <children>
+            <Button fx:id="Back" layoutY="2.0" mnemonicParsing="false" onAction="#back" prefHeight="15.0" prefWidth="47.0" text="Back">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Button>
+         </children></Pane>
+        <TableView fx:id="tbReview" layoutY="33.0" prefHeight="477.0" prefWidth="900.0">
+            <columns>
+                <TableColumn fx:id="colItemId" prefWidth="159.4285604953766" text="Item Code" />
+                <TableColumn fx:id="colName" prefWidth="252.00001525878906" text="Name" />
+                <TableColumn fx:id="colPrice" prefWidth="186.28567504882812" text="Price" />
+                <TableColumn fx:id="colRating" minWidth="0.0" prefWidth="223.4285888671875" text="Average Rating" />
+                <TableColumn fx:id="colReview" maxWidth="538.8570861816406" minWidth="0.0" prefWidth="91.42852783203125" text="Review" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
