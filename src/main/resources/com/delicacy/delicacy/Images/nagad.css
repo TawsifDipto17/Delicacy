@@ -1,0 +1,12 @@
+.nagadBtn {
+    -fx-background-image: url("nagad.png")
+}
+/*
+
+.nagadBtn:hover {
+    -fx-background-image: url("nagad.png")
+}
+
+.nagadBtn:pressed {
+    -fx-background-image: url("nagad.png")
+}*/
