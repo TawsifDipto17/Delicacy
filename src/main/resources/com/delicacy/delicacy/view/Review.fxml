@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="RV" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="700.0" style="-fx-background-color: #b02510;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.delicacy.delicacy.ReviewPageController">
+    <children>
+
+        <Pane layoutX="-200.0" layoutY="3.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="900.0" style="-fx-background-color: #c18640;" />
+        <TableView fx:id="tbReview" layoutY="33.0" prefHeight="477.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="colItemId" prefWidth="150.28570771217346" text="Item Code" />
+                <TableColumn fx:id="colName" prefWidth="194.28573608398438" text="Name" />
+                <TableColumn fx:id="colReview" maxWidth="724.5715026855469" minWidth="0.0" prefWidth="354.85711669921875" text="Review" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
