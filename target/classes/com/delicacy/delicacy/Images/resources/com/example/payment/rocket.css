@@ -1,0 +1,11 @@
+.rocketBtn {
+    -fx-background-image: url("rsz_rocket_1.png")
+}
+
+.rocketBtn:hover {
+    -fx-background-image: url("rsz_rocket_1.png")
+}
+
+.rocketBtn:pressed {
+    -fx-background-image: url("rsz_rocket_1.png")
+}

@@ -1,0 +1,11 @@
+.bkashBtn {
+    -fx-background-image: url("rsz_1bkash.png")
+}
+
+.bkashBtn:hover {
+    -fx-background-image: url("rsz_1bkash.png")
+}
+
+.bkashBtn:pressed {
+    -fx-background-image: url("rsz_1bkash.png")
+}
