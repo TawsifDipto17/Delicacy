@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.delicacy.delicacy.menuController">
+   <left>
+      <VBox prefHeight="489.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="bkashBtn" mnemonicParsing="false" onAction="#onBkash" prefHeight="178.0" prefWidth="232.0" styleClass="bkashBtn">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="145.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/rsz_1bkash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="nagadBtn" mnemonicParsing="false" onAction="#onNagad" prefHeight="162.0" prefWidth="231.0" styleClass="nagadBtn">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="145.0" fitWidth="205.0" pickOnBounds="true" preserveRatio="true">
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                     <image>
+                        <Image url="@../Images/rsz_nagad.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="rocketBtn" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#onRocket" prefHeight="160.0" prefWidth="234.0" styleClass="rocketBtn">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="122.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/rocket.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Label fx:id="paymentLabel" text="Please select your payment option" textAlignment="CENTER" textFill="#85858c94" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Italic" size="35.0" />
+         </font>
+      </Label>
+   </center>
+   <top>
+      <Pane prefHeight="21.0" prefWidth="900.0" style="-fx-background-color: #c18640;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutY="-2.0" mnemonicParsing="false" onAction="#back" prefHeight="20.0" prefWidth="45.0" text="Back" />
+            <Button layoutX="751.0" layoutY="-2.0" mnemonicParsing="false" onAction="#goToHome" text="Home" />
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
