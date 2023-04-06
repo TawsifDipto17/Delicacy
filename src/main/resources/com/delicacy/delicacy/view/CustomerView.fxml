@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AV" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.delicacy.delicacy.CustomerViewController">
+    <children>
+        <Pane layoutY="2.0">
+            <children>
+                <ImageView fitHeight="512.0" fitWidth="900.0" onMouseClicked="#admin_login" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/back3.jpg" />
+                    </image>
+                </ImageView>
+                <Pane layoutX="248.0" layoutY="156.0" />
+                <Button fx:id="btsales" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="495.0" layoutY="85.0" mnemonicParsing="false" onAction="#custReviewOnAction" opacity="0.76" prefHeight="142.0" prefWidth="148.0" style="-fx-background-color: #c18640;" text="Reviews" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btmenu" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="190.0" layoutY="85.0" mnemonicParsing="false" onAction="#MenuOnAction" opacity="0.76" prefHeight="142.0" prefWidth="148.0" style="-fx-background-color: #c18640;" text="Menu" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="19.0" />
+                    </font>
+                </Button>
+                <ImageView fx:id="imrating" disable="true" fitHeight="82.0" fitWidth="97.0" layoutX="529.0" layoutY="128.0" onMouseClicked="#custReviewOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/rating.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btrating" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="190.0" layoutY="290.0" mnemonicParsing="false" onAction="#profileOnAction" opacity="0.76" prefHeight="142.0" prefWidth="148.0" style="-fx-background-color: #c18640;" text="My Profile" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="19.0" />
+                    </font>
+                </Button>
+                <ImageView fx:id="improfile" disable="true" fitHeight="90.0" fitWidth="105.0" layoutX="216.0" layoutY="330.0" onDragDetected="#profileOnAction" onDragEntered="#profileOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/myProfile.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="immenu" disable="true" fitHeight="82.0" fitWidth="89.0" layoutX="223.0" layoutY="128.0" onMouseClicked="#MenuOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/m.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#f2f2cc" fontSmoothingType="LCD" layoutX="22.0" layoutY="27.0" onMouseClicked="#admin_login" strokeType="OUTSIDE" strokeWidth="0.0" text="Login as Admin">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Text>
+                <Button fx:id="btexit" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="495.0" layoutY="290.0" mnemonicParsing="false" onAction="#Exit" opacity="0.76" prefHeight="142.0" prefWidth="148.0" style="-fx-background-color: #c18640;" text="Exit" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="19.0" />
+                    </font>
+                </Button>
+                <ImageView fx:id="imexit" disable="true" fitHeight="82.0" fitWidth="82.0" layoutX="537.0" layoutY="334.0" onMouseClicked="#Exit" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/arrow.png" />
+                    </image>
+                </ImageView>
+            <ImageView fx:id="pic" fitHeight="90.0" fitWidth="82.0" layoutX="773.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fill="#f2f2cc" fontSmoothingType="LCD" layoutX="791.0" layoutY="128.0" onMouseClicked="#logout" strokeType="OUTSIDE" strokeWidth="0.0" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            </children>
+        </Pane>
+        <Pane layoutX="39.0" layoutY="327.0" />
+        <Pane layoutX="39.0" layoutY="152.0" />
+        <Pane layoutX="248.0" layoutY="327.0" />
+    </children>
+</AnchorPane>
