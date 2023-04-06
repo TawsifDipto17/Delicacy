@@ -1,0 +1,89 @@
+CREATE TABLE `Admin_Details` (
+	`First_Name` varchar(60),
+	`Last_Name` varchar(60),
+	`Email` varchar(60) NOT NULL,
+	`Password` varchar(6000),
+	PRIMARY KEY (`Email`)
+);
+
+CREATE TABLE `Customer_Details` (
+	`First_Name` varchar(60),
+	`Last_Name` varchar(60),
+	`Email` varchar(60) NOT NULL,
+	`Password` varchar(6000),
+	`Image` longblob,
+	`Contact` varchar(60),
+	`Address` varchar(6000),
+	PRIMARY KEY (`Email`)
+);
+
+CREATE TABLE `Food_Menu` (
+	`Item_Code` varchar(60) NOT NULL,
+	`Name` varchar(60),
+	`Price` varchar(60),
+	`Image` longblob,
+	`Description` varchar(2000),
+	 PRIMARY KEY (`Item_Code`)
+);
+
+
+
+CREATE TABLE `Customer_Order` (
+	`Order_Id` int NOT NULL AUTO_INCREMENT,
+	`Customer_Name` varchar(60),
+	`Email` varchar(60),
+	`Order_Details` varchar(9000),
+	`Delivery_Status` varchar(20),
+	`Payment_Status` varchar(20),
+	`Cost` int,
+	Date DATETIME DEFAULT now(),
+	PRIMARY KEY (`Order_Id`)
+);
+
+
+CREATE TABLE `Review_Rating` (
+    `Item_Code` varchar(60) NOT NULL,
+	`Rating` int,
+	`Review` text(65500)
+);
+
+
+CREATE TABLE `Promo_Code` (
+    `PromoCode` varchar(60),
+    `Amount` int,
+     Date DATETIME DEFAULT now(),
+     PRIMARY KEY (Date)
+);
+
+select sum(Cost)
+From Customer_Order
+Where Date >= (DATE_SUB( now(), INTERVAL 4 week ));
+
+
+
+insert into Promo_Code values ('wrererqr',now());
+
+
+SELECT Food_Menu.Item_Code, Food_Menu.Name,Food_Menu.Price,AVG(Review_Rating.Rating),Review_Rating.Review
+                    FROM Review_Rating
+                    INNER JOIN Food_Menu ON Food_Menu.Item_Code=Review_Rating.Item_Code
+                    Group By Food_Menu.Item_Code, Food_Menu.Name,Food_Menu.Price,Review_Rating.Review;
+
+select Food_Menu.Name,Review_Rating.Rating, Review_Rating.Review from Review_Rating,Food_Menu where Food_Menu.Item_Code=Review_Rating.Item_Code;
+
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection conn = DriverManager.getConnection(
+  "jdbc:mysql://ap-south.connect.psdb.cloud/delicacy?sslMode=VERIFY_IDENTITY",
+  "apike5c6fiy1rsrajmzv",
+  "pscale_pw_9QXgibEIlGrneTReXBvzn80n9OV8HW53gPMndCpo2mB");
+
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection conn = DriverManager.getConnection(
+  "jdbc:mysql://ap-south.connect.psdb.cloud/delicacy?sslMode=VERIFY_IDENTITY",
+  "apike5c6fiy1rsrajmzv",
+  "pscale_pw_9QXgibEIlGrneTReXBvzn80n9OV8HW53gPMndCpo2mB");
+
+Username:	apike5c6fiy1rsrajmzv
+Password:	pscale_pw_9QXgibEIlGrneTReXBvzn80n9OV8HW53gPMndCpo2mB
+Username:	apike5c6fiy1rsrajmzv
+Password:	pscale_pw_9QXgibEIlGrneTReXBvzn80n9OV8HW53gPMndCpo2mB
